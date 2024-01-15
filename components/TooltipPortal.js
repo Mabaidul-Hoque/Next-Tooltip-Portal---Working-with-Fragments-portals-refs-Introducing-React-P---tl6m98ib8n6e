@@ -4,6 +4,10 @@ const portalRoot = typeof document !== 'undefined' ? document.getElementById('to
 
 function TooltipPortal({ children }) {
 
+  return ReactDOM.createPortal(
+    <div>{children}</div>,
+    portalRoot
+  )
 }
 
 export default TooltipPortal;
